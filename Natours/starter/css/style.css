@@ -7,19 +7,26 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -36,17 +43,17 @@ body {
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
 }
-.logo-box {
+.header__logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
-.logo {
-  height: 35px;
+.header__logo {
+  height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -58,22 +65,22 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
-.heading-primary-main {
+.heading-primary--main {
   display: block;
-  font-size: 60px;
-  font-weight: 400px;
-  letter-spacing: 30px;
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3rem;
   animation-name: moveInLeft;
   animation-duration: 0.7s;
 }
 
-.heading-primary-sub {
+.heading-primary--sub {
   display: block;
-  font-size: 16px;
-  letter-spacing: 17px;
+  font-size: 1.6rem;
+  letter-spacing: 1.6rem;
   font-weight: 700;
   animation-name: moveInRight;
   animation-duration: 0.7s;
@@ -128,11 +135,12 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
 }
 .btn {
+  font-size: 1.6rem;
   position: relative;
   transition: all 0.15s ease-in-out;
 }
@@ -153,7 +161,7 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all 0.3s;
 }
 
@@ -162,18 +170,18 @@ body {
   opacity: 0;
 }
 
-.btn-white,
-.btn-white::after {
+.btn--white,
+.btn--white::after {
   background-color: #fff;
   color: #777;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.2);
 }
